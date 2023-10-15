@@ -11,11 +11,9 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
 
 public class RockPaperScissorTests extends TestConfig {
-    MyWeaponChoice myWeaponChoice;
-
+    MyWeaponChoice myWeaponChoice = new MyWeaponChoice();
     @Test
     public void apiStatusCheck() {
-        myWeaponChoice = new MyWeaponChoice();
         given()
                 .body(myWeaponChoice.rock())
         .when()
@@ -26,7 +24,6 @@ public class RockPaperScissorTests extends TestConfig {
 
     @Test
     public void verifyJSONSchema() {
-        myWeaponChoice = new MyWeaponChoice();
         given()
                 .body(myWeaponChoice.paper())
         .when()
@@ -89,7 +86,6 @@ public class RockPaperScissorTests extends TestConfig {
 
     @Test
     public void randomnessTest(){
-        myWeaponChoice = new MyWeaponChoice();
         int rockCount =0;
         int paperCount=0;
         int scissorCount=0;
@@ -127,7 +123,6 @@ public class RockPaperScissorTests extends TestConfig {
 
     @DataProvider(name = "weapons")
     public Object[][] mydataprov() {
-        myWeaponChoice = new MyWeaponChoice();
         return new Object[][]{
                 {1}, {2}, {3}
         };
