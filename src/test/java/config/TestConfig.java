@@ -2,6 +2,7 @@ package config;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
+import objects.MyWeaponChoice;
 import org.testng.annotations.BeforeClass;
 
 public class TestConfig {
@@ -14,6 +15,5 @@ public class TestConfig {
         RestAssured.requestSpecification = new RequestSpecBuilder()
                 .setContentType("application/json")
                 .build();
-
     }
 }
