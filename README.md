@@ -1,1 +1,1 @@
-# RPSChallenge
+# Rock Paper Scissors Challenge
