@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "your_weapon": {
+      "type": "string"
+    },
+    "computer_weapon": {
+      "type": "string"
+    },
+    "winner": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "your_weapon",
+    "computer_weapon",
+    "winner"
+  ]
+}
